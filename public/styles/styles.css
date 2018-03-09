@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Lunar Rebellion Styles */
+
+* {
+  box-sizing: border-box
+}
+
+.page h1 {
+  font-family: 'Tulpen One', cursive;
+  font-size: 2.5rem;
+  margin: 1.5rem 2rem;
+}
+
+p,
+button,
+input {
+  margin-bottom: 1rem;
+}
+
+.board {
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 60rem;
+  height: 50rem;
+  margin-bottom: 12rem;
+}
+.playArea {
+  position: relative;
+  overflow: auto;
+}
+.board .boardTile {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px white;
+  text-align: center;
+  background-color: gray;
+  color: white;
+  flex-basis: 16%;
+}
+.board .boardTile span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+  font-size: .8rem;
+}
+
+.question-form {
+  width: 50%;
+  margin: 1rem auto auto 2rem;
+  background-color: silver;
+  padding: 2rem;
+}
+
+.question-form .form-box {
+  width: 100%;
+}
+
+.question-form label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#diceResult {
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-right: .6rem;
+  border: 2px solid black;
+  border-radius: .5rem;
+}
+#diceResult small {
+  font-size: .8rem;
+}
+#diceResult span {
+  font-size: 3em;
+  font-family: 'Tulpen One', cursive;
+}
+.tool {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#contentArea {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+}
+
+#sideContent {
+  width: 15rem;
+  background-color: Silver;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  flex-shrink: 0;
+  fkex-grow: 0;
+}
+
+.playerInfoSide .player-card {
+  font-family: 'Tulpen One', cursive;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.board .boardTile .player-avatar {
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+}
+/*.player-avatar.Cinder-start,
+.player-avatar.Cress-start {
+  position: element(#royalPortOfArtemisia);
+  transform: translateY(-50%);
+}
+.player-avatar.Scarlet-start {
+  position: element(#menagerie);
+  transform: translateY(-50%);
+}
+.player-avatar.Winter-start {
+  position: element(#wintersRoom);
+  transform: translateY(-50%);
+}*/
+
+
+
+.chat {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 10rem;
+  width: 25rem;
+  z-index: 100;
+}
+
+.chat form {
+  background: #000;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 25rem;
+}
+.chat form input {
+  border: 0;
+  padding: 10px;
+  width: 70%;
+  margin-right: .5%;
+}
+.chat form button {
+  background: rgb(130, 224, 255);
+  border: none;
+  padding: 10px;
+}
+.chat #messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: black solid 1px;
+  overlow: auto;
+  height: 100%;
+}
+.chat #messages li {
+  padding: 5px 10px;
+}
+.chat #messages li:nth-child(odd) {
+  background: #eee;
+}
