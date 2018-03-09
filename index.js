@@ -21,8 +21,8 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use('/static', express.static(path.join(__dirname, 'public')))
-// app.use(express.static(path.join(__dirname, 'public'))); // -- older version
+// app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public'))); // -- older version
 app.use('/', routes);
 app.use('/game', game);
 
