@@ -1,0 +1,26 @@
+var dice = [
+  {
+    "title": "Dice roll: 1",
+    "src": "images/dice1.svg"
+  },
+  {
+    "title": "Dice roll: 2",
+    "src": "images/dice2.svg"
+  },
+  {
+    "title": "Dice roll: 3",
+    "src": "images/dice3.svg"
+  },
+  {
+    "title": "Dice roll: 4",
+    "src": "images/dice4.svg"
+  },
+  {
+    "title": "Dice roll: 5",
+    "src": "images/dice5.svg"
+  },
+  {
+    "title": "Dice roll: 6",
+    "src": "images/dice6.svg"
+  }
+]
