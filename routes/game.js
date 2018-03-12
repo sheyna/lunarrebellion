@@ -47,12 +47,13 @@ var tiles = [
 tiles = shuffle(tiles);
 
 /* GET Game page. */
-router.get('/', function(req, res) {
+router.post('/', function(req, res) {
+  const { username, player } = req.body
   res.render('game', {
       title: 'Lunar Rebellion',
       tiles: tiles,
-      username: req.body.username,
-      player: req.body.player
+      username,
+      player
   });
 });
 

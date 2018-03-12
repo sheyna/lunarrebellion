@@ -1,26 +1,26 @@
 [
   {
-    "title": "Dice roll: 1",
+    "title": "Dice roll: 1 (click to roll again)",
     "src": "images/dice1.svg"
   },
   {
-    "title": "Dice roll: 2",
+    "title": "Dice roll: 2 (click to roll again)",
     "src": "images/dice2.svg"
   },
   {
-    "title": "Dice roll: 3",
+    "title": "Dice roll: 3 (click to roll again)",
     "src": "images/dice3.svg"
   },
   {
-    "title": "Dice roll: 4",
+    "title": "Dice roll: 4 (click to roll again)",
     "src": "images/dice4.svg"
   },
   {
-    "title": "Dice roll: 5",
+    "title": "Dice roll: 5 (click to roll again)",
     "src": "images/dice5.svg"
   },
   {
-    "title": "Dice roll: 6",
+    "title": "Dice roll: 6 (click to roll again)",
     "src": "images/dice6.svg"
   }
 ]
