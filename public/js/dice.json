@@ -1,4 +1,4 @@
-var dice = [
+[
   {
     "title": "Dice roll: 1",
     "src": "images/dice1.svg"

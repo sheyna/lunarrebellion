@@ -133,8 +133,14 @@ input {
   text-align: center;
   margin-bottom: 1rem;
   margin-right: .6rem;
-  border: 2px solid black;
-  border-radius: .5rem;
+  border: 4px solid silver;
+  border-radius: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+}
+#diceResult img {
+  position: relative;
+  width: 100%;
 }
 #diceResult small {
   font-size: .8rem;
@@ -164,7 +170,7 @@ input {
   left: 0;
   padding: 2rem;
   flex-shrink: 0;
-  fkex-grow: 0;
+  flex-grow: 0;
 }
 
 .playerInfoSide .player-card {
