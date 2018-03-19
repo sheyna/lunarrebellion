@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M69.286,11.429c10.634,0,19.286,8.651,19.286,19.286v38.571c0,10.634-8.652,19.286-19.286,19.286H30.714  c-10.634,0-19.286-8.651-19.286-19.286V30.714c0-10.634,8.652-19.286,19.286-19.286H69.286 M69.286,5H30.714  C16.513,5,5,16.512,5,30.714v38.571C5,83.488,16.513,95,30.714,95h38.571C83.487,95,95,83.488,95,69.286V30.714  C95,16.512,83.487,5,69.286,5L69.286,5z"/><circle cx="30.714" cy="30.714" r="6.429"/><circle cx="69.286" cy="69.286" r="6.429"/><circle cx="69.286" cy="30.714" r="6.429"/><circle cx="30.714" cy="69.286" r="6.429"/><circle cx="50" cy="50" r="6.429"/><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Christopher T. Howlett</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="80px" height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+<path d="M55.177,9.231c8.319,0,15.091,6.771,15.091,15.093V54.51c0,8.32-6.771,15.091-15.091,15.091H24.99
+	c-8.322,0-15.093-6.77-15.093-15.091V24.323c0-8.322,6.771-15.093,15.093-15.093L55.177,9.231 M55.177,4.2H24.99
+	c-11.114,0-20.123,9.009-20.123,20.123v30.185c0,11.114,9.009,20.124,20.123,20.124h30.185c11.114,0,20.124-9.01,20.124-20.122
+	V24.323C75.299,13.209,66.289,4.2,55.177,4.2L55.177,4.2z"/>
+<circle cx="24.99" cy="24.323" r="5.031"/>
+<path d="M55.177,49.478c2.776,0,5.028,2.252,5.028,5.032c0,2.777-2.252,5.029-5.028,5.029c-2.781,0-5.033-2.252-5.033-5.029
+	C50.144,51.729,52.396,49.478,55.177,49.478z"/>
+<path d="M55.177,19.292c2.776,0,5.028,2.253,5.028,5.031s-2.252,5.031-5.028,5.031c-2.781,0-5.033-2.253-5.033-5.031
+	S52.396,19.292,55.177,19.292z"/>
+<circle cx="24.99" cy="54.508" r="5.031"/>
+<circle cx="40.083" cy="39.416" r="5.031"/>
+</svg>
