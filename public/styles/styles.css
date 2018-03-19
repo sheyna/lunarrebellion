@@ -59,16 +59,33 @@ table {
   box-sizing: border-box
 }
 
-.page h1 {
+.page header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 6px solid black;
+}
+
+.page header h1 {
   font-family: 'Tulpen One', cursive;
   font-size: 2.5rem;
-  margin: 1.5rem 2rem;
+}
+
+.page header h2 {
+  font-family: 'Tulpen One', cursive;
+  font-size: 1.5rem;
 }
 
 p,
-button,
 input {
   margin-bottom: 1rem;
+}
+
+button {
+  border: none;
+  padding: 5px;
 }
 
 .board {
@@ -92,8 +109,18 @@ input {
   border: solid 1px white;
   text-align: center;
   background-color: gray;
+  background-image: url("../images/space4.jpg");
   color: white;
   flex-basis: 16%;
+}
+.board .boardTile[id*="outerSector"] {
+  background-image: url("../images/space1.jpg");
+}
+.board .boardTile[id*="lavaTube"] {
+  background-image: url("../images/space2.jpg");
+}
+.board .boardTile[id*="maglevPlatform"] {
+  background-image: url("../images/space5.jpg");
 }
 .board .boardTile span {
   width: 100%;
@@ -187,21 +214,6 @@ input {
   position: absolute;
   z-index: 100;
 }
-/*.player-avatar.Cinder-start,
-.player-avatar.Cress-start {
-  position: element(#royalPortOfArtemisia);
-  transform: translateY(-50%);
-}
-.player-avatar.Scarlet-start {
-  position: element(#menagerie);
-  transform: translateY(-50%);
-}
-.player-avatar.Winter-start {
-  position: element(#wintersRoom);
-  transform: translateY(-50%);
-}*/
-
-
 
 .chat {
   position: fixed;
@@ -226,7 +238,6 @@ input {
   margin-right: .5%;
 }
 .chat form button {
-  background: rgb(130, 224, 255);
   border: none;
   padding: 10px;
 }
