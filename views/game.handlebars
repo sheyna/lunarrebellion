@@ -20,7 +20,7 @@
     <section class="playArea">
       <div class="board" id="boardTiles">
           {{#each tiles}}
-            <div class="boardTile" id="{{id}}">
+            <div class="boardTile" id="{{id}}" data-boxposition="{{@index}}" >
               <span>{{title}}</span>
             </div>
           {{/each}}
@@ -38,5 +38,24 @@
   </section>
 </section>
 
+<script src="js/addPlayerAvatar.js"></script>
+<script src="js/moveAvatar.js"></script>
+<script>
+  $(document).ready(function() {
+    var currentPosition = addPlayerAvatar("{{player}}");
+    console.log(currentPosition);
+
+    // // add the event listeners for all the cells:
+    // var tileCells = document.querySelectorAll(".boardTile");
+    // result = [];
+    // for (var z = 0; z < tileCells.length; z++) {
+    //   result = tileCells[z];
+    //   result.addEventListener('click', function() {
+    //     moveAvatar(this);
+    //   });
+    // }
+  })
+</script>
 <script src="js/rollDice.js"></script>
+
 

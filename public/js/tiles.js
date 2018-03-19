@@ -104,3 +104,5 @@ var tileObjects = [
 //   var html = template(tiles);
 //   $('#DocumentResults').html(html);
 // });
+
+// module.exports = tileObjects;

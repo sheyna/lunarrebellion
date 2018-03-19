@@ -4,6 +4,8 @@ var app = express();
 var router = express.Router();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+// var tiles = require('./js/tiles.js');
+
 
 // Shuffle Source: https://css-tricks.com/snippets/javascript/shuffle-array/
 function shuffle(arr) {
@@ -47,7 +49,7 @@ var tiles = [
 tiles = shuffle(tiles);
 
 /* GET Game page. */
-router.post('/', function(req, res) {
+router.post('/', (req, res) => {
   const { username, player } = req.body
   res.render('game', {
       title: 'Lunar Rebellion',
@@ -56,6 +58,9 @@ router.post('/', function(req, res) {
       player
   });
 });
+
+
+
 
 var chatspace = io.of('/chatspace');
 chatspace.on('connection', function(socket){
