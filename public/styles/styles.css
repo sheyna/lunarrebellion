@@ -92,9 +92,15 @@ button {
   display: flex;
   margin: 0;
   flex-wrap: wrap;
-  width: 60rem;
-  height: 50rem;
+  width: 40rem;
+  height: 30rem;
   margin-bottom: 12rem;
+}
+@media (min-width: 640px) {
+  .board {
+    width: 60rem;
+    height: 50rem;
+  }
 }
 .playArea {
   position: relative;
@@ -130,7 +136,12 @@ button {
   padding-bottom: 1rem;
   justify-content: center;
   text-align: center;
-  font-size: .8rem;
+  font-size: .6rem;
+}
+@media (min-width: 640px) {
+  .board .boardTile span  {
+    font-size: .8rem;
+  }
 }
 
 .question-form {
@@ -184,13 +195,19 @@ button {
 
 #contentArea {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   max-width: 100%;
 }
 
+@media (min-width: 640px) {
+  #contentArea {
+    flex-direction: row;
+  }
+}
+
 #sideContent {
-  width: 15rem;
+  width: 100%;
   background-color: Silver;
   position: relative;
   top: 0;
@@ -198,6 +215,12 @@ button {
   padding: 2rem;
   flex-shrink: 0;
   flex-grow: 0;
+}
+
+@media (min-width: 640px) {
+  #sideContent {
+    width: 15rem;
+  }
 }
 
 .playerInfoSide .player-card {
@@ -211,37 +234,58 @@ button {
   height: 2rem;
   background-color: red;
   border-radius: 50%;
-  position: absolute;
   z-index: 100;
+  position: absolute;
 }
 
-.chat {
+.game-token {
+  width: 3rem;
+  position: absolute;
+  z-index: 99;
+}
+.game-token img {
+  width: 100%;
+}
+
+#chat {
   position: fixed;
   right: 0;
   bottom: 0;
   height: 10rem;
-  width: 25rem;
-  z-index: 100;
+  width: 100%;
+  z-index: 110;
 }
 
-.chat form {
+@media (min-width: 640px) {
+  #chat {
+    width: 25rem;
+  }
+}
+
+#chat > button {
+  height: 1.5rem;
+  background-color: Silver;
+  margin-left: 1px;
+}
+
+#chat form {
   background: #000;
   padding: 3px;
   position: fixed;
   bottom: 0;
-  width: 25rem;
+  width: 100%;
 }
-.chat form input {
+#chat form input {
   border: 0;
   padding: 10px;
   width: 70%;
   margin-right: .5%;
 }
-.chat form button {
+#chat form button {
   border: none;
   padding: 10px;
 }
-.chat #messages {
+#chat #messages {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -250,9 +294,27 @@ button {
   overlow: auto;
   height: 100%;
 }
-.chat #messages li {
+#chat #messages li {
   padding: 5px 10px;
 }
-.chat #messages li:nth-child(odd) {
+#chat #messages li:nth-child(odd) {
   background: #eee;
+}
+#chat.colapse-chat {
+  height: 80px;
+}
+#chat.colapse-chat #messages {
+  height: 0;
+}
+#chat.colapse-chat> button#colapseChatBtn {
+  display: none;
+}
+#chat > button#colapseChatBtn {
+  display: block;
+}
+#chat > button#expandChatBtn {
+  display: none;
+}
+#chat.colapse-chat > button#expandChatBtn {
+  display: block;
 }

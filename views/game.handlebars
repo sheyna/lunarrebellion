@@ -5,7 +5,10 @@
 <section class="page">
   <header>
     <h1>Lunar Rebellion</h1>
-    <h2>Welcome {{username}}</h2>
+    <section>
+      <h2>Welcome {{username}}</h2>
+      <a href="/" id="newGameBtn">New Game</a>
+    </section>
   </header>
   <section id="contentArea">
     <section id="sideContent" class="playerInfoSide">
@@ -17,7 +20,6 @@
         </div>
         <button id="rollDiceBtn">Roll Dice</button>
       </aside>
-      <p><a href="/" id="newGameBtn">New Game</a></p>
     </section>
     <section class="playArea">
       <div class="board" id="boardTiles">
@@ -28,7 +30,9 @@
           {{/each}}
       </div>
     </section>
-    <section class="chat">
+    <section id="chat">
+      <button id="colapseChatBtn">Colapse chat</button>
+      <button id="expandChatBtn">Expand chat</button>
       <ul id="messages"></ul>
       <form id="chatBox" action="">
         <input id="m" autocomplete="off" placeholder="Type chat message here" />
@@ -46,16 +50,37 @@
   $(document).ready(function() {
     var currentPosition = addPlayerAvatar("{{player}}");
 
-    // add the event listeners for all the cells:
+    // gather cells to create event listeners for all the cells:
     var tileCells = document.querySelectorAll(".boardTile");
     result = [];
+
+    // place lunar crown on board
+    var crownPosition = addLunarCrown(currentPosition, tileCells);
+    crownPosition = parseInt(crownPosition);
+
+    // add the event listeners for all the cells:
     for (var z = 0; z < tileCells.length; z++) {
       result = tileCells[z];
       result.addEventListener('click', function() {
-        currentPosition = moveAvatar(this, currentPosition);
+        currentPosition = moveAvatar(this, currentPosition, crownPosition);
       });
     }
+
+
+
   })
+
+  document.getElementById("colapseChatBtn").addEventListener('click', colapseChat);
+
+  document.getElementById("expandChatBtn").addEventListener('click', expandChat);
+
+  function colapseChat() {
+    document.getElementById("chat").classList.add('colapse-chat');
+  }
+
+  function expandChat() {
+    document.getElementById("chat").classList.remove('colapse-chat');
+  }
 </script>
 <script src="js/rollDice.js"></script>
 

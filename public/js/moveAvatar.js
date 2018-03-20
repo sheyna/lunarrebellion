@@ -1,4 +1,4 @@
-function moveAvatar(domElement, startingPosition) {
+function moveAvatar(domElement, startingPosition, crownPosition) {
   startingPosition = parseInt(startingPosition);
   queryClick = domElement.dataset.boxposition;
   queryClick = parseInt(queryClick);
@@ -19,12 +19,19 @@ function moveAvatar(domElement, startingPosition) {
      // you can move to right
      startingPosition = makeMove(queryClick);
   }
+
+  // check if game is won:
+  if (startingPosition === crownPosition) {
+    alert("You won!");
+  }
+
   return startingPosition
 }
 
 function makeMove(queryClick) {
   // move avatar:
   $("#playerAvatar").prependTo(".boardTile[data-boxposition='" + queryClick + "']");
+
   // update current position variable:
   startingPosition = queryClick;
   return startingPosition
