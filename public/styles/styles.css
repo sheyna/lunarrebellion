@@ -106,7 +106,7 @@ button {
   position: relative;
   overflow: auto;
 }
-.board .boardTile {
+.board .board-tile {
   flex-grow: 1;
   flex-shrink: 1;
   display: flex;
@@ -119,16 +119,16 @@ button {
   color: white;
   flex-basis: 16%;
 }
-.board .boardTile[id*="outerSector"] {
+.board .board-tile[id*="outerSector"] {
   background-image: url("../images/space1.jpg");
 }
-.board .boardTile[id*="lavaTube"] {
+.board .board-tile[id*="lavaTube"] {
   background-image: url("../images/space2.jpg");
 }
-.board .boardTile[id*="maglevPlatform"] {
+.board .board-tile[id*="maglevPlatform"] {
   background-image: url("../images/space5.jpg");
 }
-.board .boardTile span {
+.board .board-tile span {
   width: 100%;
   height: 100%;
   display: flex;
@@ -139,7 +139,7 @@ button {
   font-size: .6rem;
 }
 @media (min-width: 640px) {
-  .board .boardTile span  {
+  .board .board-tile span  {
     font-size: .8rem;
   }
 }
@@ -169,7 +169,6 @@ button {
   justify-content: center;
   flex-shrink: 0;
   text-align: center;
-  margin-bottom: 1rem;
   margin-right: .6rem;
   border: 4px solid silver;
   border-radius: 1.5rem;
@@ -215,21 +214,40 @@ button {
   padding: 2rem;
   flex-shrink: 0;
   flex-grow: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 @media (min-width: 640px) {
   #sideContent {
     width: 15rem;
+    flex-direction: column;
   }
 }
 
-.playerInfoSide .player-card {
-  font-family: 'Tulpen One', cursive;
-  font-size: 4rem;
-  margin-bottom: 3rem;
+.player-info-side p {
+  margin-bottom: 0;
 }
 
-.board .boardTile .player-avatar {
+.player-info-side .player-name {
+  font-family: 'Tulpen One', cursive;
+  font-size: 4rem;
+}
+
+.player-card {
+  margin-right: 3rem;
+}
+
+@media (min-width: 640px) {
+  .player-card {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+}
+
+
+
+.board .board-tile .player-avatar {
   width: 2rem;
   height: 2rem;
   background-color: red;
@@ -275,6 +293,11 @@ button {
   bottom: 0;
   width: 100%;
 }
+@media (min-width: 640px) {
+  #chat form {
+    width: 25rem;
+  }
+}
 #chat form input {
   border: 0;
   padding: 10px;
@@ -306,7 +329,7 @@ button {
 #chat.colapse-chat #messages {
   height: 0;
 }
-#chat.colapse-chat> button#colapseChatBtn {
+#chat.colapse-chat > button#colapseChatBtn {
   display: none;
 }
 #chat > button#colapseChatBtn {

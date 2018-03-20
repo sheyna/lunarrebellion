@@ -30,7 +30,7 @@ function moveAvatar(domElement, startingPosition, crownPosition) {
 
 function makeMove(queryClick) {
   // move avatar:
-  $("#playerAvatar").prependTo(".boardTile[data-boxposition='" + queryClick + "']");
+  $("#playerAvatar").prependTo(".board-tile[data-boxposition='" + queryClick + "']");
 
   // update current position variable:
   startingPosition = queryClick;

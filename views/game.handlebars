@@ -11,9 +11,11 @@
     </section>
   </header>
   <section id="contentArea">
-    <section id="sideContent" class="playerInfoSide">
-      <p>Player:</p>
-      <p class="player-card">{{player}}</p>
+    <section id="sideContent" class="player-info-side">
+      <section class="player-card">
+        <p>Player:</p>
+        <p class="player-name">{{player}}</p>
+      </section>
       <aside class="tool">
         <div id="diceResult">
           <small id="diceContent">Click to Roll Dice</small>
@@ -24,7 +26,7 @@
     <section class="playArea">
       <div class="board" id="boardTiles">
           {{#each tiles}}
-            <div class="boardTile" id="{{id}}" data-boxposition="{{@index}}" >
+            <div class="board-tile" id="{{id}}" data-boxposition="{{@index}}" >
               <span>{{title}}</span>
             </div>
           {{/each}}
@@ -51,7 +53,7 @@
     var currentPosition = addPlayerAvatar("{{player}}");
 
     // gather cells to create event listeners for all the cells:
-    var tileCells = document.querySelectorAll(".boardTile");
+    var tileCells = document.querySelectorAll(".board-tile");
     result = [];
 
     // place lunar crown on board
