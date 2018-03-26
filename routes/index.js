@@ -10,8 +10,4 @@ router.get('/', function(req, res) {
   });
 });
 
-// router.post('/join', function(req, res) {
-//   res.send('You sent the name "' + req.body.username + '".');
-// });
-
 module.exports = router;
