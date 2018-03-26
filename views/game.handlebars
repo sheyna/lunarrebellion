@@ -41,13 +41,12 @@
         <button id="chatSubmitBtn">Send</button>
       </form>
     </section>
-
-
   </section>
 </section>
 
 <script src="js/addPlayerAvatar.js"></script>
 <script src="js/moveAvatar.js"></script>
+<script src="js/addLunarCrown.js"></script>
 <script>
   $(document).ready(function() {
     var currentPosition = addPlayerAvatar("{{player}}");
@@ -67,10 +66,6 @@
         currentPosition = moveAvatar(this, currentPosition, crownPosition);
       });
     }
-
-  })
-
+  });
 </script>
 <script src="js/rollDice.js"></script>
-
-

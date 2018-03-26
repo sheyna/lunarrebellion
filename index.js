@@ -13,13 +13,6 @@ var game = require('./routes/game');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-var currentPlayers = [];
-
-function Player(name, username) {
-  this.name = name;
-  this.username = username;
-}
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
