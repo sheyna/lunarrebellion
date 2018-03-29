@@ -6,7 +6,13 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var tiles = require('../lib/tiles.js');
 var shuffle = require('../lib/shuffle.js');
-var chatspace = io.of('/chatspace');
+
+
+// CHAT SERVER REQUIRES:
+
+// var chatspace = io.of('/chatspace');
+var chatspace = io.of('/');
+
 
 tiles = shuffle(tiles);
 
@@ -21,20 +27,22 @@ router.post('/', (req, res) => {
   });
 });
 
+
+
+// CHAT SERVER CODE:
+
+// chat code is failing on the .emit(). Still working to get it
+// to work on separate chat space but on the same page as /game:
+
 router.get('/', function(req, res, next) {
   chatspace.on('connection', function(socket){
-    // socket.broadcast.emit('hi');  // Send for everyone except those on a certain socket
-    // console.log("we are connected");
-    // chatspace.emit('chat message', '-A user connected-');
     socket.on('chat message', function(msg) {
       console.log('message: ' + msg);
       chatspace.emit('chat message', msg);
     });
-    // socket.on('disconnect', function() {
-    //   chatspace.emit('chat message', '-A user disconnected-');
-    // });
-    //}
   });
 });
+
+
 
 module.exports = router;
